@@ -9,7 +9,7 @@ from tensorflow.keras.models import load_model
 class Patients:
     def __init__(self):
         self.__config = load_config("./configs/configs.json")
-        self.__model = load('./models/miokard_dt_v1.joblib')
+        self.__model_fatal = load('./models/miokard_dt_v1.joblib')
         self.__columns = list(self.__config.keys())
         self.__groups_columns = self.get_groups_params(self.__config)
         self.__dataframe = pd.DataFrame(columns=self.__columns)
@@ -62,11 +62,19 @@ class Patients:
             save_data(self.__dataframe, path)
 
     def get_forecast_complication(self, ):
-        return [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+        input_data =  self.get_dataframe()
+        target_columns = ['FIBR_PREDS_75', 'PREDS_TAH_83', 'JELUD_TAH_66', 'FIBR_JELUD_90', 
+                 'A_V_BLOK_77', 'OTEK_LANC_70', 'RAZRIV_73', 'DRESSLER_65', 'ZSN_62'
+                 , 'REC_IM_73', 'P_IM_STEN_64']
+        answer = []
+        for i in target_columns:
+            model = load_model('./models/'+i)
+            answer.append(model.predict(input_data)[0])
+        return answer #[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
     def get_forecasting_fatal_outcome(self):
         input_data =  self.get_dataframe()
-        answer = self.__model.predict(input_data)[0]
+        answer = self.__model_fatal.predict(input_data)[0]
         print(answer)
         if answer == 0:
             return [0,100]
@@ -189,6 +197,7 @@ class Patients:
             
         
         df_full = pd.read_csv('./datasets/knn_zero_day_data.csv')  
+        df_full.drop(columns = ['DEATH'],inplace = True)
         df_full.append(df_out)
         for column in df_full.columns:
             df_full[column] =(df_full[column] - df_full[column].min()) / (df_full[column].max() - df_full[column].min()) 
@@ -198,4 +207,8 @@ class Patients:
         
 
     def get_forecasting_cause_fatal_outcome(self):
-        return [15, 30, 45, 60, 75, 90, 100]
+        input_data =  self.get_dataframe()
+        model = load_model('./models/let_is')
+        answer = model.predict(input_data)[0]
+            
+        return answer#[15, 30, 45, 60, 75, 90, 100]

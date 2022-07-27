@@ -1,0 +1,567 @@
+{
+  "surname": {
+	"field_description": "Фамилия",
+    "default": null,
+	"group": null
+  },
+  "name": {
+	"field_description": "Имя",
+    "default": null,
+	"group": null
+  },
+  "middle_name": {
+	"field_description": "Отчество",
+    "default": null,
+	"group": null
+  },
+  "gender": {
+    "field_description": "Пол",
+    "default": null,
+	"group": null
+  },
+  "date_birth": {
+    "field_description": "Дата рождения",
+    "default": null,
+	"group": null
+  },
+  "number_myocardial_infarctions": {
+    "field_description": "Количество инфарктов миокарда",
+    "default": 0,
+	"group": null
+  },
+  "duration_stenocardia": {
+    "field_description": "Стенокардия напряжения",
+    "default": 0,
+	"group": null
+  },
+  "functional_class_stenocardia": {
+    "field_description": "Функциональный класс стенокардии в последний год",
+    "default": 0,
+	"group": null
+  },
+  "characteristics_ashd": {
+    "field_description": "Характер ИБС в последние недели, дни перед пост. в больницу",
+    "default": 0,
+	"group": null
+  },
+  "hypertension": {
+    "field_description": "Наличие гипертонической болезни",
+    "default": 0,
+	"group": null
+  },
+  "symptomatic_hypertension": {
+    "field_description": "Симптоматическая гипертония",
+    "default": 0,
+	"group": null
+  },
+  "arterial_hypertension_duration": {
+    "field_description": "Длительность течения арт. гипертензии",
+    "default": 0,
+	"group": null
+  },
+  "chronic_heart_failure": {
+    "field_description": "Наличие хронической СН",
+    "default": 0,
+	"group": null
+  },
+  "rhythm_disturbances_anamnesis": {
+    "field_description": "Нарушения ритма (анамнез)",
+    "default": 0,
+	"group": "cardiovascular_disorders_anamnesis"
+  },
+  "atrial_extrasystole_anamnesis": {
+    "field_description": "Предсердная экстрасистолия (анамнез)",
+    "default": 0,
+	"group": "cardiovascular_disorders_anamnesis"
+  },
+  "ventricular_extrasystole_anamnesis": {
+    "field_description": "Желудочковая экстрасистолия (анамнез)",
+    "default": 0,
+	"group": "cardiovascular_disorders_anamnesis"
+  },
+  "paroxysms_atrial_fibrillation_anamnesis": {
+    "field_description": "Пароксизмы фибрилляции предсердий (анамнез)",
+    "default": 0,
+	"group": "cardiovascular_disorders_anamnesis"
+  },
+  "permanent_form_atrial_fibrillation_anamnesis": {
+    "field_description": "Постоянная форма фибрилляции предсердий (анамнез)",
+    "default": 0,
+	"group": "cardiovascular_disorders_anamnesis"
+  },
+  "ventricular_fibrillation_anamnesis": {
+    "field_description": "Фибрилляция желудочков (анамнез)",
+    "default": 0,
+	"group": "cardiovascular_disorders_anamnesis"
+  },
+  "ventricular_paroxysmal_tachycardia_anamnesis": {
+    "field_description": "Желудочковая пароксизмальная тахикардия (анамнез)",
+    "default": 0,
+	"group": "cardiovascular_disorders_anamnesis"
+  },
+  "AV_block_one_degree_anamnesis": {
+    "field_description": "АВ блокада I степени (анамнез)",
+    "default": 0,
+	"group": "heart_block_anamnesis"
+  },
+  "AV_block_three_degree_anamnesis": {
+    "field_description": "АВ блокада III степени (анамнез)",
+    "default": 0,
+	"group": "heart_block_anamnesis"
+  },
+  "left_bundle_anterior_branch_block_anamnesis": {
+    "field_description": "Блокада передней ветви левой ножки пучка Гиса (анамнез)",
+    "default": 0,
+	"group": "heart_block_anamnesis"
+  },
+  "left_bundle_branch_incomplete_block_anamnesis": {
+    "field_description": "Неполная блокада левой ножки пучка Гиса (анамнез)",
+    "default": 0,
+	"group": "heart_block_anamnesis"
+  },
+  "left bundle_branch_full_block_anamnesis": {
+    "field_description": "Полная блокада левой ножки пучка Гиса (анамнез)",
+    "default": 0,
+	"group": "heart_block_anamnesis"
+  },
+  "right_bundle_branch_incomplete_block_anamnesis": {
+    "field_description": "Неполная блокада правой ножки пучка Гиса (анамнез)",
+    "default": 0,
+	"group": "heart_block_anamnesis"
+  },
+  "right_bundle_branch_full_block_anamnesis": {
+    "field_description": "Полная блокада правой ножки пучка Гиса (анамнез)",
+    "default": 0,
+	"group": "heart_block_anamnesis"
+  },
+  "diabetes_anamnesis": {
+    "field_description": "Сахарный диабет (анамнез)",
+    "default": 0,
+	"group": "accompanying_illnesses"
+  },
+  "obesity_anamnesis": {
+    "field_description": "Ожирение (анамнез)",
+    "default": 0,
+	"group": "accompanying_illnesses"
+  },
+  "thyrotoxicosis_anamnesis": {
+    "field_description": "Тиреотоксикоз (анамнез)",
+    "default": 0,
+	"group": "accompanying_illnesses"
+  },
+  "chronical_bronchitis_anamnesis": {
+    "field_description": "Хронический бронхит (анамнез)",
+    "default": 0,
+	"group": "accompanying_illnesses"
+  },
+  "obstructive_chronic_bronchitis_anamnesis": {
+    "field_description": "Обструктивный хронический бронхит (анамнез)",
+    "default": 0,
+	"group": "accompanying_illnesses"
+  },
+  "bronchial_asthma_anamnesis": {
+    "field_description": "Бронхиальная астма (анамнез)",
+    "default": 0,
+	"group": "accompanying_illnesses"
+  },
+  "chronic_pneumonia_anamnesis": {
+    "field_description": "Хроническая пневмония (анамнез)",
+    "default": 0,
+	"group": "accompanying_illnesses"
+  },
+  "pulmonary_tuberculosis_anamnesis": {
+    "field_description": "Туберкулез легких (анамнез)",
+    "default": 0,
+	"group": "accompanying_illnesses"
+  },
+  "systolic_pressure": {
+    "field_description": "Систолическое АД (ОРиИТ)",
+    "default": 110,
+	"group": null
+  },
+  "diastolic_pressure": {
+    "field_description": "Диастолическое АД (ОРиИТ)",
+    "default": 70,
+	"group": null
+  },
+  "pulmonary_edema_intensive_care_unit": {
+    "field_description": "Отек легких (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders"
+  },
+  "cardiogenic_shock_intensive_care_unit": {
+    "field_description": "Кардиогенный шок (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders"
+  },
+  "paroxysms_atrial_fibrillation_intensive_care_unit": {
+    "field_description": "Пароксизм фибрилляции предсердий (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders"
+  },
+  "paroxysm_supraventricular_tachycardia_intensive_care_unit": {
+    "field_description": "Пароксизм суправентрикулярной тахикардии (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders"
+  },
+  "paroxysm_ventricular_tachycardia_intensive_care_unit": {
+    "field_description": "Пароксизм желудочковой тахикардии (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders"
+  },
+  "ventricular_fibrillation_intensive_care_unit": {
+    "field_description": "Фибрилляция желудочков (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders"
+  },
+  "infarction_anterior_wall_left_ventricle": {
+    "field_description": "Наличие инфаркта передней стенки левого желудочка (изменения на ЭКГ в отведениях V1 - V4)",
+    "default": 0,
+	"group": null
+  },
+  "infarction_lateral_wall_left_ventricle": {
+    "field_description": "Наличие инфаркта боковой стенки левого желудочка (изменения на ЭКГ в отведениях V5 - V6 , I, AVL)",
+    "default": 0,
+	"group": null
+  },
+  "infarction_inferior_wall_left_ventricle": {
+    "field_description": "Наличие инфаркта нижней стенки левого желудочка (изменения на ЭКГ в отведениях III, AVF, II)",
+    "default": 0,
+	"group": null
+  },
+  "infarction_posterior_wall_left_ventricle": {
+    "field_description": "Наличие инфаркта задней стенки левого желудочка (изменения на ЭКГ в отведениях V7 - V9, реципрокные изменения в отведениях V1 - V3)",
+    "default": 0,
+	"group": null
+  },
+  "right_ventricular_myocardial_infarction": {
+    "field_description": "Наличие ИМ правого желудочка",
+    "default": 0,
+	"group": null
+  },
+  "sinus rhythm": {
+    "field_description": "Ритм по ЭКГ - синусовый",
+    "default": 0,
+	"group": "rhythm_ecg"
+  },
+  "atrial_fibrillation": {
+    "field_description": "Ритм по ЭКГ - фибрилляция предсердий",
+    "default": 0,
+	"group": "rhythm_ecg"
+  },
+  "atrial_rhythm": {
+    "field_description": "Ритм по ЭКГ - предсердный",
+    "default": 0,
+	"group": "rhythm_ecg"
+  },
+  "idioventricular_rhythm": {
+    "field_description": "Ритм по ЭКГ - идиовентрикулярный",
+    "default": 0,
+	"group": "rhythm_ecg"
+  },
+  "sinus_tachycardia": {
+    "field_description": "Ритм по ЭКГ - синусовый с ЧСС более 90 в мин. (синусовая тахикардия)",
+    "default": 0,
+	"group": "rhythm_ecg"
+  },
+  "sinus_bradycardia": {
+    "field_description": "Ритм по ЭКГ - синусовый с ЧСС менее 60 в мин. (синусовая брадикардия)",
+    "default": 0,
+	"group": "rhythm_ecg"
+  },
+  "atrial_extrasystole_ecg": {
+    "field_description": "Предсердная экстрасистолия на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders_ecg"
+  },
+  "frequent_atrial_extrasystoles_ecg": {
+    "field_description": "Частая предсердная экстросистолия на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders_ecg"
+  },
+  "ventricular_extrasystole_ecg": {
+    "field_description": "Желудочковая экстросистолия на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders_ecg"
+  },
+  "frequent_ventricular_extrasystole_ecg": {
+    "field_description": "Частая желудочковая экстросистолия на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders_ecg"
+  },
+  "paroxysms_atrial_fibrillation_ecg": {
+    "field_description": "Пароксизмы фибрилляции предсердий на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders_ecg"
+  },
+  "permanent_form_atrial_fibrillation_ecg": {
+    "field_description": "Постоянная форма фибрилляции предсердий на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders_ecg"
+  },
+  "supraventricular_paroxysmal_tachycardia_ecg": {
+    "field_description": "Суправентрикулярная пароксизмальная тахикардия на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders_ecg"
+  },
+  "ventricular_paroxysmal_tachycardia_ecg": {
+    "field_description": "Желудочковая пароксизмальная тахикардия на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders_ecg"
+  },
+  "ventricular_fibrillation_ecg": {
+    "field_description": "Фибрилляция желудочков на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders_ecg"
+  },
+  "sinoatrial blockade_ecg": {
+    "field_description": "Синоатриальная блокада на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "cardiovascular_disorders_ecg"
+  },
+  "AV_block_one_degree_ecg": {
+    "field_description": "АВ блокада I степени на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "heart_block_ecg"
+  },
+  "AV_block_two_degree_one_type_ecg": {
+    "field_description": "АВ блокада II степени I типа на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "heart_block_ecg"
+  },
+  "AV_block_two_degree_two_type_ecg": {
+    "field_description": "АВ блокада II степени II типа на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "heart_block_ecg"
+  },
+  "AV_block_three_degree_ecg": {
+    "field_description": "АВ блокада III степени на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "heart_block_ecg"
+  },
+  "left_bundle_anterior_branch_his_ecg": {
+    "field_description": "Блокада передней ветви левой ножки пучка Гиса на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "heart_block_ecg"
+  },
+  "left_bundle_posterior_branch_block_ecg": {
+    "field_description": "Блокада задней ветви левой ножки пучка на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "heart_block_ecg"
+  },
+  "left_bundle_branch_incomplete_block_ecg": {
+    "field_description": "Неполная блокада левой ножки пучка Гиса на ЭКГ",
+    "default": 0,
+	"group": "heart_block_ecg"
+  },
+  "left bundle_branch_full_block_ecg": {
+    "field_description": "Полная блокада левой ножки пучка Гиса на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "heart_block_ecg"
+  },
+  "right_bundle_branch_incomplete_block_ecg": {
+    "field_description": "Неполная блокада правой ножки пучка Гиса на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "heart_block_ecg"
+  },
+  "right_bundle_branch_full_block_ecg": {
+    "field_description": "Полная блокада правой ножки пучка Гиса на ЭКГ (ОРиИТ)",
+    "default": 0,
+	"group": "heart_block_ecg"
+  },
+  "celiasum_750": {
+    "field_description": "Проведение фибринолитической терапии целиазой 750 тыс. ЕД",
+    "default": 0,
+	"group": "fibrinolytic_therapy"
+  },
+  "celiasum_1_mln": {
+    "field_description": "Проведение фибринолитической терапии целиазой 1 млн. ЕД",
+    "default": 0,
+	"group": "fibrinolytic_therapy"
+  },
+  "streptodecasum_3": {
+    "field_description": "Проведение фибринолитической терапии стрептодеказой 3 млн. ЕД",
+    "default": 0,
+	"group": "fibrinolytic_therapy"
+  },
+  "streptasum": {
+    "field_description": "Проведение фибринолитической терапии стрептазой",
+    "default": 0,
+	"group": "fibrinolytic_therapy"
+  },
+  "celiasum_500": {
+    "field_description": "Проведение фибринолитической терапии целиазой 500 тыс. ЕД",
+    "default": 0,
+	"group": "fibrinolytic_therapy"
+  },
+  "celiasum_250": {
+    "field_description": "Проведение фибринолитической терапии целиазой 250 тыс. ЕД",
+    "default": 0,
+	"group": "fibrinolytic_therapy"
+  },
+  "streptodecasum_1_5": {
+    "field_description": "Проведение фибринолитической терапии стрептодеказой 1,5 млн. ЕД",
+    "default": 0,
+	"group": "fibrinolytic_therapy"
+  },
+  "hypokalemia": {
+    "field_description": "Гипокалиемия (< 4 ммоль/л)",
+    "default": 4,
+	"group": null
+  },
+  "potassium_content": {
+    "field_description": "Содержание калия в сыворотке крови",
+    "default": 0,
+	"group": null
+  },
+  "increasing_sodium": {
+    "field_description": "Увеличение натрия в сыворотке крови (более 150 ммоль/л)",
+    "default": 150,
+	"group": null
+  },
+  "sodium": {
+    "field_description": "Содержание натрия в сыворотке крови",
+    "default": 0,
+	"group": null
+  },
+  "alt": {
+    "field_description": "Содержание АлАТ в крови",
+    "default": 1,
+	"group": null
+  },
+  "ast": {
+    "field_description": "Содержание АсАТ в крови",
+    "default": 0.2,
+	"group": null
+  },
+  "leukocytes": {
+    "field_description": "Содержание лейкоцитов в крови",
+    "default": 8,
+	"group": null
+  },
+  "erythrocytes": {
+    "field_description": "Cкорость оседания эритроцитов",
+    "default": 10,
+	"group": null
+  },
+  "time_anginal_attack": {
+    "field_description": "Время, прошедшее от начала ангинозного приступа до поступления в стационар",
+    "default": 1,
+	"group": null
+  },
+  "narcotic_analgesics_cardio_team": {
+    "field_description": "Применение наркотических анальгетиков (кардиобригада)",
+    "default": 0,
+	"group": "medications_cardio_team"
+  },
+  "nonnarcotic_analgesics_cardio_team": {
+    "field_description": "Применение ненаркотических анальгетиков (кардиобригада)",
+    "default": 0,
+	"group": "medications_cardio_team"
+  },
+  "lidocaine_cardio_team": {
+    "field_description": "Введение лидокаина (кардиобригада)",
+    "default": 0,
+	"group": "medications_cardio_team"
+  },
+  "liquid_nitrates_intensive_care_unit": {
+    "field_description": "Применение жидких нитратов (ОРиИТ)",
+    "default": 0,
+	"group": "medications"
+  },
+  "lidocaine_intensive_care_unit": {
+    "field_description": "Применение лидокаина (ОРиИТ)",
+    "default": 0,
+	"group": "medications"
+  },
+  "beta_blockers_intensive_care_unit": {
+    "field_description": "Применение бета-блокаторов (ОРиИТ)",
+    "default": 0,
+	"group": "medications"
+  },
+  "calcium_antagonists_intensive_care_unit": {
+    "field_description": "Применение антагонистов кальция (ОРиИТ)",
+    "default": 0,
+	"group": "medications"
+  },
+  "anticoagulants_intensive_care_unit": {
+    "field_description": "Введение антикоагулянтов (гепарина) (ОРиИТ)",
+    "default": 0,
+	"group": "medications"
+  },
+  "aspirin_intensive_care_unit": {
+    "field_description": "Введение аспирина (ОРиИТ)",
+    "default": 0,
+	"group": "medications"
+  },
+  "ticklid_intensive_care_unit": {
+    "field_description": "Введение тиклида (ОРиИТ)",
+    "default": 0,
+	"group": "medications"
+  },
+  "trental_intensive_care_unit": {
+    "field_description": "Введение трентала (ОРиИТ)",
+    "default": 0,
+	"group": "medications"
+  },
+  "atrial_fibrillation_complications": {
+    "field_description": "Фибрилляция предсердий (осложнение)",
+    "default": 0,
+	"group": null
+  },
+    "supraventricular_tachycardia_complications": {
+    "field_description": "Суправентрикулярная тахикардия (осложнение)",
+    "default": 0,
+	"group": null
+  },
+  "ventricular_tachycardia_complications": {
+    "field_description": "Суправентрикулярная тахикардия (осложнение)",
+    "default": 0,
+	"group": null
+  },
+  "ventricular_fibrillation_complications": {
+    "field_description": "Фибрилляция желудочков (осложнение)",
+    "default": 0,
+	"group": null
+  },
+  "AV_full_block_complications": {
+    "field_description": "Полная АВ блокада (осложнение)",
+    "default": 0,
+	"group": null
+  },
+  "pulmonary_edema_complications": {
+    "field_description": "Отек легких (осложнение)",
+    "default": 0,
+	"group": null
+  },
+  "heartbreak_complications": {
+    "field_description": "Отек легких (осложнение)",
+    "default": 0,
+	"group": null
+  },
+  "dressler_syndrome_complications": {
+    "field_description": "Синдром Дресслера (осложнение)",
+    "default": 0,
+	"group": null
+  },
+  "chronic_heart_failure_complications": {
+    "field_description": "Хроническая сердечная недостаточность (осложнение)",
+    "default": 0,
+	"group": null
+  },
+  "recurrent_myocardial_infarction_complications": {
+    "field_description": "Рецидив инфаркта миокарда (осложнение)",
+    "default": 0,
+	"group": null
+  },
+  "postinfarction_angina_complications": {
+    "field_description": "Постинфарктная стенокардия (осложнение)",
+    "default": 0,
+	"group": null
+  },
+  "death": {
+    "field_description": "Летальный исход",
+    "default": 0,
+	"group": null
+  }
+}
