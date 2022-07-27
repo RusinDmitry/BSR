@@ -2,11 +2,13 @@ import pandas as pd
 from os.path import join
 from utils import load_config, save_data
 from datetime import datetime
+from joblib import load
 
 
 class Patients:
     def __init__(self):
         self.__config = load_config("./configs/configs.json")
+        self.__model = load('./models/miokard_dt_v1.joblib')
         self.__columns = list(self.__config.keys())
         self.__groups_columns = self.get_groups_params(self.__config)
         self.__dataframe = pd.DataFrame(columns=self.__columns)
@@ -62,14 +64,14 @@ class Patients:
         return [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
     def get_forecasting_fatal_outcome(self):
-        self.get_dataframe()
+        return self.get_dataframe()
         return [50, 50]
 
     def get_dataframe(self):
         df_out = pd.DataFrame()
         now = pd.Timestamp('now')
-        df_out['AGE'] = (now-self.__dataframe['date_birth']).astype('<m8[Y]')
-        df_out['SEX'] = self.__dataframe['gender'].replace([0,1],['женский','мужской'])
+        df_out['AGE'] = (now-pd.to_datetime(self.__dataframe['date_birth'])).astype('<m8[Y]')
+        df_out['SEX'] = self.__dataframe['gender'].replace(["женский","мужской"],[0,1]).astype('float')
         df_out['INF_ANAM'] = self.__dataframe['number_myocardial_infarctions']
         df_out['STENOK_AN'] = self.__dataframe['duration_stenocardia']
         df_out['FK_STENOK'] = self.__dataframe['functional_class_stenocardia']
@@ -170,10 +172,29 @@ class Patients:
         df_out['ASP_S_n'] = self.__dataframe['aspirin_intensive_care_unit']
         df_out['TIKL_S_n'] = self.__dataframe['ticklid_intensive_care_unit']
         df_out['TRENT_S_n'] = self.__dataframe['trental_intensive_care_unit']
+        
+        
+        for column in df_out.columns:     
+            try:
+                df_out[column] = df_out[column].astype('float')
+            except Exception:
+                print(column)
+            
+        
+        df_full = pd.read_csv('./datasets/knn_zero_day_data.csv')  
+        df_full.append(df_out)
+        for column in df_full.columns:
+            df_full[column] =(df_full[column] - df_full[column].min()) / (df_full[column].max() - df_full[column].min()) 
+        input_data = df_full.iloc[-1:]
         file_name = datetime.now().strftime('%m_%d_%Y_%H_%M_%S')
         path = join('./uploading', f'{file_name}.csv')
-        save_data(df_out, path)
-        
-        
+        save_data(input_data, path)
+        answer = self.__model.predict(df_out)[0]
+        print(answer)
+        if answer == 0:
+            return [0,100]
+        else:
+            return [100,0]
+
     def get_forecasting_cause_fatal_outcome(self):
         return [15, 30, 45, 60, 75, 90, 100]
