@@ -3,6 +3,7 @@ from os.path import join
 from utils import load_config, save_data
 from datetime import datetime
 from joblib import load
+from tensorflow.keras.models import load_model
 
 
 class Patients:
@@ -64,8 +65,14 @@ class Patients:
         return [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
     def get_forecasting_fatal_outcome(self):
-        return self.get_dataframe()
-        return [50, 50]
+        input_data =  self.get_dataframe()
+        answer = self.__model.predict(input_data)[0]
+        print(answer)
+        if answer == 0:
+            return [0,100]
+        else:
+            return [100,0]    
+   
 
     def get_dataframe(self):
         df_out = pd.DataFrame()
@@ -186,15 +193,9 @@ class Patients:
         for column in df_full.columns:
             df_full[column] =(df_full[column] - df_full[column].min()) / (df_full[column].max() - df_full[column].min()) 
         input_data = df_full.iloc[-1:]
-        file_name = datetime.now().strftime('%m_%d_%Y_%H_%M_%S')
-        path = join('./uploading', f'{file_name}.csv')
-        save_data(input_data, path)
-        answer = self.__model.predict(df_out)[0]
-        print(answer)
-        if answer == 0:
-            return [0,100]
-        else:
-            return [100,0]
+        
+        return input_data
+        
 
     def get_forecasting_cause_fatal_outcome(self):
         return [15, 30, 45, 60, 75, 90, 100]
